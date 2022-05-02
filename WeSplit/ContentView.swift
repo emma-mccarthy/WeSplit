@@ -52,14 +52,12 @@ struct ContentView: View {
                     Text("Number of people")
                 }
                 
-                
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(tipPercentages, id: \.self) {
                             Text($0, format: .percent)
                         }
-                    }
-                    .pickerStyle(.segmented)
+                    } .pickerStyle(.segmented)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
@@ -77,6 +75,7 @@ struct ContentView: View {
                 }
                 
             }
+            
             .navigationTitle("WeSplit")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
